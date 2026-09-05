@@ -1,6 +1,24 @@
 const navbar = document.querySelector('.navbar');
 const heroCopy = document.querySelector('.hero-copy');
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNavigation = document.querySelector('.main-navigation');
 let lastScrollY = window.scrollY;
+
+if (menuToggle && mainNavigation) {
+    menuToggle.addEventListener('click', () => {
+        const isOpen = mainNavigation.classList.toggle('menu-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    });
+
+    mainNavigation.addEventListener('click', (event) => {
+        if (event.target.closest('a')) {
+            mainNavigation.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open navigation');
+        }
+    });
+}
 
 if (navbar || heroCopy) {
     window.addEventListener('scroll', () => {
