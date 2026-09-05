@@ -139,6 +139,83 @@
         background: #ffffff;
     }
 
+    .about {
+        display: grid;
+        grid-template-columns: 45% 55%;
+        align-items: center;
+        min-height: calc(100vh - 55px);
+        padding: 40px clamp(24px, 8vw, 120px);
+        overflow: hidden;
+        background: #ffffff;
+    }
+
+    .about-marci-img {
+        display: block;
+        align-self: center;
+        justify-self: center;
+        width: min(390px, 92%);
+        aspect-ratio: 1;
+        height: auto;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .about-content {
+        justify-self: center;
+        width: min(460px, 90%);
+        color: #202020;
+    }
+
+    .about-content h2 {
+        margin: 0 0 18px;
+        font-size: clamp(1.8rem, 3.5vw, 3rem);
+        font-weight: 500;
+        line-height: 1.1;
+        text-transform: uppercase;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .about-content p {
+        margin: 0 0 22px;
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+
+    .about-call-button {
+        display: inline-grid;
+        min-width: 150px;
+        min-height: 46px;
+        place-items: center;
+        padding: 12px 22px;
+        border: 1px solid #202020;
+        color: #202020;
+        background: transparent;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .call-number {
+        display: none;
+    }
+
+    .about-call-button:hover,
+    .about-call-button:focus-visible {
+        color: #ffffff;
+        background: #202020;
+    }
+
+    .about-call-button:hover .call-label,
+    .about-call-button:focus-visible .call-label {
+        display: none;
+    }
+
+    .about-call-button:hover .call-number,
+    .about-call-button:focus-visible .call-number {
+        display: inline;
+    }
+
     .navbar {
         box-sizing: border-box;
         display: flex;
@@ -241,5 +318,22 @@
         .hero-copy {
             right: 20px;
             left: 20px;
+        }
+
+        .about {
+            grid-template-columns: 1fr;
+            gap: 34px;
+            min-height: calc(100vh - 130px);
+            padding: 56px 24px 40px;
+        }
+
+        .about-content {
+            grid-row: 1;
+            max-width: none;
+        }
+
+        .about-marci-img {
+            grid-row: 2;
+            width: min(330px, 82vw);
         }
     }
