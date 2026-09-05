@@ -71,9 +71,18 @@
         left: clamp(24px, 8vw, 120px);
         max-width: 530px;
         color: #ffffff;
-        transform: translateY(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(calc(-50% + 30px));
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
         z-index: 2;
+    }
+
+    .hero-copy.hero-copy-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-50%);
     }
 
     .hero-copy p {
@@ -90,6 +99,7 @@
 
     .hero-copy-brokerage {
         margin: 14px 0 0;
+        font-family: 'Times New Roman', Times, serif;
         font-size: clamp(2rem, 5vw, 3rem);
         font-weight: 500;
         line-height: 1.15;
@@ -104,22 +114,27 @@
         text-transform: uppercase;
     }
 
-    .hero-copy button {
+    .hero-copy a.hero-call-button {
+        display: inline-block;
         margin-top: 18px;
         padding: 12px 26px;
         border: 1px solid #ffffff;
         border-radius: 0;
         color: #ffffff;
         background: transparent;
+        -webkit-appearance: none;
+        appearance: none;
         cursor: pointer;
         font: inherit;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 0.85rem;
         font-weight: 600;
         letter-spacing: 0.08em;
+        text-decoration: none;
         transition: background-color 0.2s ease, color 0.2s ease;
     }
 
-    .hero-copy button:hover {
+    .hero-copy a.hero-call-button:hover {
         color: #171717;
         background: #ffffff;
     }
