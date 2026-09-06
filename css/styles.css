@@ -266,14 +266,95 @@
         transform: translateY(-2px);
     }
 
+    .affiliations {
+        padding: 30px clamp(24px, 8vw, 120px) 34px;
+        border-top: 15px solid #ffffff;
+        color: #222222;
+        background: #000000;
+    }
+
+    .affiliations-eyebrow {
+        margin: 0 0 18px;
+        color: #ffffff;
+        font-size: 0.80rem;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .affiliations-strip {
+        display: flex;
+        align-items: center;
+        gap: clamp(36px, 6vw, 96px);
+        margin-right: calc(-1 * clamp(24px, 8vw, 120px));
+        margin-left: calc(-1 * clamp(24px, 8vw, 120px));
+        padding: 22px 0;
+        padding-right: clamp(24px, 8vw, 120px);
+        padding-left: clamp(24px, 8vw, 120px);
+        border-top: 1px dashed #ffffff;
+        border-bottom: 1px dashed #ffffff;
+    }
+
+    .affiliations-metric {
+        flex: 0 0 min(230px, 24%);
+        margin: 0;
+        color: #bbbbbb;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+        line-height: 1.35;
+        text-transform: uppercase;
+    }
+
+    .affiliations-metric strong {
+        display: block;
+        color: #ffffff;
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    .affiliations-logos {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp(52px, 9vw, 150px);
+        min-width: 0;
+    }
+
+    .affiliations-logos img {
+        display: block;
+        box-sizing: border-box;
+        width: auto;
+        max-width: 160px;
+        height: 92px;
+        padding: 6px;
+        border-radius: 4px;
+        object-fit: contain;
+        background: #f2f2f2;
+        opacity: 0.9;
+    }
+
     .about {
         display: grid;
-        grid-template-columns: 45% 55%;
+        grid-template-columns: 50% 50%;
         align-items: center;
         min-height: calc(100vh - 55px);
         padding: 40px clamp(24px, 8vw, 120px);
         overflow: hidden;
         background: #ffffff;
+    }
+
+    .about-title {
+        grid-column: 1 / -1;
+        margin: 0;
+        color: #202020;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
     }
 
     .about-marci-img {
@@ -629,12 +710,63 @@
             font-size: 0.72rem;
         }
 
+        .affiliations {
+            padding: 28px 20px 30px;
+        }
+
+        .affiliations-eyebrow {
+            margin-bottom: 16px;
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+        }
+
+        .affiliations-strip {
+            display: block;
+            margin-right: -20px;
+            margin-left: -20px;
+            padding: 20px 0 18px;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        .affiliations-metric {
+            width: auto;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .affiliations-metric strong {
+            display: inline;
+            margin-right: 5px;
+            font-size: 1.8rem;
+        }
+
+        .affiliations-logos {
+            justify-content: flex-start;
+            gap: 40px;
+            overflow-x: auto;
+            padding: 2px 0 8px;
+            scrollbar-width: thin;
+        }
+
+        .affiliations-logos img {
+            flex: 0 0 auto;
+            max-width: 100px;
+            height: 52px;
+        }
+
         .about {
             display: flex;
             flex-direction: column;
             gap: 0;
             min-height: calc(100vh - 130px);
             padding: 30px 24px 34px;
+        }
+
+        .about-title {
+            order: 0;
+            margin-bottom: 24px;
+            font-size: clamp(2rem, 8vw, 3rem);
         }
 
         .about-content {
