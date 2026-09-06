@@ -236,8 +236,28 @@
         </section>
 
         <!-- Photo Gallery -->
-        <section>
-
+        <section class="photo-gallery" aria-labelledby="gallery-title">
+            <h1 id="gallery-title">Photo Gallery</h1>
+            <div class="gallery-carousel">
+                <button class="gallery-control gallery-control--previous" type="button" aria-label="Previous photo">&#8249;</button>
+                <div class="gallery-window" aria-live="polite">
+                    <img class="gallery-photo gallery-photo--far-left" src="images/photoGallery_6.png" alt="Pahrump Valley neighborhood">
+                    <img class="gallery-photo gallery-photo--left" src="images/photoGallery_7.png" alt="Pahrump Valley neighborhood">
+                    <img class="gallery-photo gallery-photo--active" src="images/photoGallery.png" alt="Aerial view of a Pahrump Valley community">
+                    <img class="gallery-photo gallery-photo--right" src="images/photoGallery_2.png" alt="Bright living room with a desert view">
+                    <img class="gallery-photo gallery-photo--far-right" src="images/photoGallery_3.png" alt="Pahrump Valley homes and mountains">
+                </div>
+                <button class="gallery-control gallery-control--next" type="button" aria-label="Next photo">&#8250;</button>
+            </div>
+            <div class="gallery-pagination" aria-label="Choose a photo">
+                <button class="gallery-page is-active" type="button" data-gallery-index="0" aria-label="Show photo 1"></button>
+                <button class="gallery-page" type="button" data-gallery-index="1" aria-label="Show photo 2"></button>
+                <button class="gallery-page" type="button" data-gallery-index="2" aria-label="Show photo 3"></button>
+                <button class="gallery-page" type="button" data-gallery-index="3" aria-label="Show photo 4"></button>
+                <button class="gallery-page" type="button" data-gallery-index="4" aria-label="Show photo 5"></button>
+                <button class="gallery-page" type="button" data-gallery-index="5" aria-label="Show photo 6"></button>
+                <button class="gallery-page" type="button" data-gallery-index="6" aria-label="Show photo 7"></button>
+            </div>
         </section>
 
         <!-- Call or Visit -->
