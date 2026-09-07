@@ -647,6 +647,7 @@
         width: min(1120px, 100%);
         height: clamp(330px, 42vw, 520px);
         margin: 0 auto;
+        border: 1px solid #202020;
     }
 
     .gallery-window {
