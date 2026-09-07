@@ -34,17 +34,13 @@ if (gallery) {
     const galleryRoles = ['gallery-photo--far-left', 'gallery-photo--left', 'gallery-photo--active', 'gallery-photo--right', 'gallery-photo--far-right'];
 
     const renderGallery = () => {
-        const indexes = [
-            (galleryIndex + galleryImages.length - 2) % galleryImages.length,
-            (galleryIndex + galleryImages.length - 1) % galleryImages.length,
-            galleryIndex,
-            (galleryIndex + 1) % galleryImages.length,
-            (galleryIndex + 2) % galleryImages.length
-        ];
+        const roleOffsets = [-2, -1, 0, 1, 2];
 
-        galleryPhotos.forEach((photo, photoIndex) => {
-            photo.src = galleryImages[indexes[photoIndex]];
-            photo.alt = galleryAlts[indexes[photoIndex]];
+        galleryPhotos.forEach((photo) => {
+            const roleIndex = galleryRoles.findIndex((role) => photo.classList.contains(role));
+            const imageIndex = (galleryIndex + roleOffsets[roleIndex] + galleryImages.length) % galleryImages.length;
+            photo.src = galleryImages[imageIndex];
+            photo.alt = galleryAlts[imageIndex];
         });
 
         galleryPages.forEach((page, pageIndex) => {
