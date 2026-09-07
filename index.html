@@ -181,7 +181,7 @@
 
         <!-- Memberships and affiliations -->
         <section class="affiliations" aria-labelledby="affiliations-title">
-            <p class="affiliations-eyebrow" id="affiliations-title">Memberships &amp; Affiliations</p>
+        <!--    <p class="affiliations-eyebrow" id="affiliations-title">Memberships &amp; Affiliations</p> -->
             <div class="affiliations-strip">
                 <p class="affiliations-metric"><strong>30+</strong> years serving Pahrump Valley</p>
                 <div class="affiliations-logos" aria-label="Professional memberships and affiliations">
@@ -237,7 +237,7 @@
 
         <!-- Photo Gallery -->
         <section class="photo-gallery" aria-labelledby="gallery-title">
-            <h1 id="gallery-title">Photo Gallery</h1>
+            <h1 id="gallery-title">Gallery</h1>
             <div class="gallery-carousel">
                 <button class="gallery-control gallery-control--previous" type="button" aria-label="Previous photo">&#8249;</button>
                 <div class="gallery-window" aria-live="polite">
@@ -260,20 +260,63 @@
             </div>
         </section>
 
-        <!-- Call or Visit -->
-        <section>
-
+        <!-- Contact form -->
+        <section class="contact-location" aria-labelledby="contact-location-title">
+            <div class="contact-grid">
+                <form class="contact-form" aria-labelledby="contact-location-title">
+                    <h1 id="contact-location-title">Contact Us</h1>
+                    <h2>Send a Message</h2>
+                    <label for="contact-name">Name</label>
+                    <input id="contact-name" name="name" type="text" autocomplete="name">
+                    <label for="contact-email">Email*</label>
+                    <input id="contact-email" name="email" type="email" autocomplete="email" required>
+                    <label for="contact-message">Message*</label>
+                    <textarea id="contact-message" name="message" rows="4" required></textarea>
+                    <button type="submit">Send</button>
+                    <p class="recaptcha-notice">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</p>
+                </form>
+            </div>
         </section>
 
-        <!-- Map -->
-        <section>
-
+        <!-- Office location and map -->
+        <section class="office-location" aria-labelledby="office-location-title">
+            <h1 id="office-location-title">Visit Us</h1>
+            <div class="office-grid">
+                <div class="office-details">
+                    <h2>Marci Metzger - THE RIDGE REALTY GROUP</h2>
+                    <address>3190 HW-160, Suite F, Pahrump, Nevada 89048, United States</address>
+                    <a class="office-phone" href="tel:+12069196886">(206) 919-6886</a>
+                    <h3>Office Hours</h3>
+                    <p class="office-open-daily"><strong>Open daily</strong> <span>8:00 am - 7:00 pm</span></p>
+                    <dl class="office-hours">
+                        <div><dt>Mon</dt><dd>08:00 am - 07:00 pm</dd></div>
+                        <div><dt>Tue</dt><dd>08:00 am - 07:00 pm</dd></div>
+                        <div><dt>Wed</dt><dd>08:00 am - 07:00 pm</dd></div>
+                        <div><dt>Thu</dt><dd>08:00 am - 07:00 pm</dd></div>
+                        <div><dt>Fri</dt><dd>08:00 am - 07:00 pm</dd></div>
+                        <div><dt>Sat</dt><dd>08:00 am - 07:00 pm</dd></div>
+                        <div><dt>Sun</dt><dd>08:00 am - 07:00 pm</dd></div>
+                    </dl>
+                    <p class="office-note">Appointments outside office hours available upon request. Just call!</p>
+                </div>
+                <div class="office-map">
+                    <iframe title="Map showing The Ridge Realty Group in Pahrump, Nevada" src="https://www.google.com/maps?q=3190+HW-160,+Suite+F,+Pahrump,+NV+89048&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!--    <a class="directions-button" href="https://www.google.com/maps/dir/?api=1&amp;destination=3190+HW-160,+Suite+F,+Pahrump,+NV+89048" target="_blank" rel="noopener">Get Directions</a> -->
+                </div>
+            </div>
         </section>
     </main> 
 
     <!-- Footer -->
     <footer>
+        <nav class="footer-social" aria-label="Social media links">
+            <a href="https://www.facebook.com/MarciHomes/" target="_blank" rel="noopener" aria-label="Facebook"><img src="images/fbLogo.png" alt=""></a>
+            <a href="https://www.instagram.com/marcimetzger_theridge/" target="_blank" rel="noopener" aria-label="Instagram"><img src="images/igLogo.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/marci-metzger-30642496/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="images/linkedinLogo.png" alt=""></a>
+            <a href="https://www.yelp.com/biz/xr3yQN_m2SgO0R_7S6p62w" target="_blank" rel="noopener" aria-label="Yelp"><img src="images/yelpLogo.png" alt=""></a>
+        </nav>
         <p>Copyright &copy; 2026 Marci Metzger - All rights reserved.</p>
+        <span class="footer-rule" aria-hidden="true"></span>
     </footer>
 
     <script src="js/script.js"></script>
