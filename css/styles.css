@@ -1,3 +1,16 @@
+    html {
+        scroll-behavior: smooth;
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    
     body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
@@ -346,7 +359,7 @@
 
     .about-title {
         grid-column: 1 / -1;
-        margin: 0;
+        margin-top: 50px;
         color: #202020;
         font-family: 'Times New Roman', Times, serif;
         font-size: clamp(2rem, 4vw, 3.2rem);
@@ -440,7 +453,7 @@
 
     .get-it-sold > h1 {
         margin: 0;
-        padding: 0px 24px 44px;
+        padding: 50px 24px 44px;
         color: #202020;
         font-family: 'Times New Roman', Times, serif;
         font-size: clamp(1.8rem, 3.5vw, 2.2rem);
